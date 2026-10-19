@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "name": "Mechanical Keyboard",
+        "price": "59.50",
+        "category": "accessories",
+        "stock": "25"
+    },
+    {
+        "id": "2",
+        "name": "Wireless Gaming Mouse",
+        "price": "39.99",
+        "category": "accessories",
+        "stock": "40"
+    },
+    {
+        "id": "3",
+        "name": "27-inch 4K Monitor",
+        "price": "299.99",
+        "category": "electronics",
+        "stock": "15"
+    },
+    {
+        "id": "4",
+        "name": "Noise-Cancelling Headphones",
+        "price": "129.50",
+        "category": "audio",
+        "stock": "30"
+    },
+    {
+        "id": "5",
+        "name": "USB-C Multi-Port Adapter",
+        "price": "24.99",
+        "category": "accessories",
+        "stock": "50"
+    },
+    {
+        "id": "6",
+        "name": "Ergonomic Desk Chair",
+        "price": "189.00",
+        "category": "furniture",
+        "stock": "10"
+    },
+    {
+        "id": "7",
+        "name": "HD 1080p Webcam",
+        "price": "45.00",
+        "category": "electronics",
+        "stock": "20"
+    },
+    {
+        "id": "8",
+        "name": "RGB Desk Mat",
+        "price": "19.99",
+        "category": "accessories",
+        "stock": "60"
+    },
+    {
+        "id": "9",
+        "name": "Studio Condenser Microphone",
+        "price": "79.99",
+        "category": "audio",
+        "stock": "18"
+    },
+    {
+        "id": "10",
+        "name": "Dual Monitor Arm",
+        "price": "64.50",
+        "category": "furniture",
+        "stock": "22"
+    }
+]
