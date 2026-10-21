@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.75);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-border-hover: rgba(99, 102, 241, 0.4);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #6366f1;
+    --accent-glow: rgba(99, 102, 241, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 32px;
+    background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+#products {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+    width: 100%;
+    max-width: 960px;
+}
+
+#products li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 22px 24px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#products li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+#products li:hover {
+    transform: translateY(-3px);
+    border-color: var(--card-border-hover);
+    box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.3), 0 0 16px var(--accent-glow);
+}
+
+#products li:hover::before {
+    opacity: 1;
+}
+
+/* Empty or error state text styling */
+#products:empty::after {
+    content: "Loading products...";
+    color: var(--text-secondary);
+    font-size: 1rem;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 24px;
+}

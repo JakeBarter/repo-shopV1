@@ -40,8 +40,8 @@ class callServer {
             //and for each item in that list, call it holdOneRepo and run the code inside the curly brackets { }
             const itemInProducts = document.createElement("li"); //creats a list item (<li></li>)
 
-            itemInProducts.textContent = `${holdOneProduct.name} - £${holdOneProduct.price} (${holdOneProduct.stock} in stock)`;
-
+            itemInProducts.textContent = `${holdOneProduct.name} \n£${holdOneProduct.price} \n|${holdOneProduct.stock} in stock|`;
+            itemInProducts.style.whiteSpace = "pre-line";
             this.productList.append(itemInProducts);
 
         }
