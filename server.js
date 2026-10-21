@@ -7,7 +7,9 @@ class server {
         this.PORT = process.env.PORT || 3000;
         this.products = require("./products.json");
 
-        this.serverGet();
+        this.app.use(this.express.static("Public"));
+        this.serverGetHealth();
+        this.serverGetProducts();
         this.serverListen();
 
     }
@@ -25,11 +27,6 @@ class server {
     serverGetProducts() {
         this.app.get("/api/products", (req, res) => {
             res.json(this.products);
-        });
-    }
-    serverHello() {
-        this.app.get("/", (req, res) => {
-            res.send("Hello from my shop");
         });
     }
 }
